@@ -1,1 +1,2 @@
-
+//file " wire.h " and " SPI.h " are in the library of the Arduino PC software ( just include the file needed in code).
+//file "SparkFunBME280.h " is in the folder scr in github
