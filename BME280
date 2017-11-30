@@ -21,7 +21,8 @@
 void setup() {
 
   mySensor.settings.commInterface = I2C MODE;
-  mySensor.settings.I2CAdress = 0x76;
+  mySensor.settings.I2CAdress = 0x76;           //Connecting SDO to GND results in slave address 1110110 (0x76)
+                                                // connection it to VDDIO results in slave address 1110111 (0x77)
 
   //weather monitoring mode
   //only a very low data rate is needed.
@@ -81,6 +82,7 @@ void setup() {
   
   
   Serial.begin(9600);
+  delay 10;
   Wire.begin();
 }
 
